@@ -4,8 +4,8 @@ var nothing;
 
 var exportGraph = function(id, url, anchor) {
     if( jQuery(anchor).hasClass("loading") ) return false;
-    var download_url = url + "graph_download?filename=";
-    url = url + "graph_svg";
+    var download_url = url + "graph_download/?filename=";
+    url = url + "graph_svg/";
     var callback = function(data, status, req) {
         jQuery(anchor).removeClass("loading").text("Save");
 	var filekey = req.responseText;
